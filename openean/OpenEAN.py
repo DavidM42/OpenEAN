@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import requests
-from RequestStatus import RequestStatus
-from Item import Item
+from openean.RequestStatus import RequestStatus
+from openean.Item import Item
 
 base_url = "http://opengtindb.org/?cmd=query"
 
