@@ -4,19 +4,21 @@ Library to use the api of the Open EAN/GTIN Database
 serves as API wrapper for the api of [this EAN/GTIN database service](https://opengtindb.org/)
 
 ## Getting started
-You need an user_id for the service; [more info how you get that](https://opengtindb.org/userid.php)
+Install the library from pypi via `pip install openean`
+
+Then you need an user_id for the service; [more info how you get that](https://opengtindb.org/userid.php)
 
 There is also an id for small tests: "400000000" as described here https://opengtindb.org/faq.php#g
 
 ```python
-from OpenEAN import OpenEAN
+from openean.OpenEAN import OpenEAN
 
 
-userID = #your user id
+userID = 400000000  #user your own id here
 
 openean = OpenEAN(userID)
 
-barcode_num = #barcode number of you product
+barcode_num = 1111 #barcode number of you product
 
 items = openean.parse(barcode_num)
 #items is a list of possible products associated with the code
@@ -30,4 +32,4 @@ for item in items:
 ```
 
 ## Thanks to
-The creators of the API for making this possible and please consider donating to ["Küste gegen Plastik"](https://www.kueste-gegen-plastik.de/unterstuetzen/) if you like this service to help the creators of the database running it.
+The creators of the API for making this possible and please consider donating to ["Kueste gegen Plastik"](https://www.kueste-gegen-plastik.de/unterstuetzen/) if you like this service to help the creators of the database running it.
