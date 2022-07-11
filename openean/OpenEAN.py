@@ -12,7 +12,7 @@ class OpenEAN:
     def request(self, ean):
         """only does request and returns raw text response doesn't check anything like error code in content"""
 
-        url = base_url + "&queryid=" + self.userID + "&ean=" + ean
+        url = base_url + "&queryid=" + str(self.userID) + "&ean=" + str(ean)
         r = requests.get(url)
 
         content = r.content
